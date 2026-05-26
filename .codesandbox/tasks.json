@@ -1,22 +1,25 @@
 {
-    // These tasks will run in order when initializing your CodeSandbox project.
-    "setupTasks": [
-      {
-        "name": "Installing Dependencies",
-        // "command": "npm install"
-      }
-    ],
-  
-    // These tasks can be run from CodeSandbox. Running one will open a log in the app.
-    "tasks": {
-      "start": {
-        "name": "start",
-        "command": "npm run start",
-        "runAtStart": false,
-        "preview": {
-          "port": 8080
-        }
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Installing Dependencies",
+      "command": "curl -fsSL https://bun.sh/install | bash",
+    },
+    {
+      "command": "$HOME/.bun/bin/bun install",
+      "name": "$HOME/.bun/bin/bun"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "start": {
+      "name": "start",
+      "command": "$HOME/.bun/bin/bun run index.ts",
+      "runAtStart": false,
+      "preview": {
+        "port": 8080
       }
     }
   }
-  
+}
