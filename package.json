@@ -9,15 +9,9 @@
   "peerDependencies": {
     "typescript": "^5"
   },
-  "scripts": {
-    "start": "bun run index.ts"
-  },
   "dependencies": {
     "express": "latest",
     "lodash": "latest",
     "request": "latest"
-  },
-  "engines": {
-    "bun": "latest"
   }
 }
